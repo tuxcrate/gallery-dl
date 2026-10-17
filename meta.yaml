@@ -3,7 +3,7 @@ tracks:
     upstream:
       datasource: pypi
       depName: gallery-dl
-      version: "1.32.16"
+      version: "1.32.17"
     baseImage: python:3.14.8-alpine3.24@sha256:f6a589d43c42b9e7f7dc67a12d37132491f362859a5d750607710cc56da3bc72
     aliases:
       - "{major}"
