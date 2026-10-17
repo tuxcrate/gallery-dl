@@ -1,5 +1,5 @@
 # gallery-dl
 
-[gallery-dl](https://pypi.org/project/gallery-dl/) container image with FFmpeg, published as `ghcr.io/tuxcrate/gallery-dl`.
+gallery-dl is a command-line program to download image galleries and collections from several image hosting sites.
 
-[Documentation](https://github.com/tuxcrate/website/blob/main/docs/image/gallery-dl.md)
+[Documentation](https://tuxcrate.com/containers/gallery-dl/)
