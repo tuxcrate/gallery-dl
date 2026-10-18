@@ -5,7 +5,8 @@ tracks:
       datasource: pypi
       depName: gallery-dl
       version: "1.32.17"
-    aliases:
-      - "{major}"
-      - "{major}.{minor}"
+    tags:
+      - "${version}"
+      - "${major}"
+      - "${major}.${minor}"
       - latest
