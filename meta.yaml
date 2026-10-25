@@ -4,7 +4,7 @@ tracks:
     upstream:
       datasource: pypi
       depName: gallery-dl
-      version: "1.32.17"
+      version: "1.32.18"
     tags:
       - "${version}"
       - "${major}"
