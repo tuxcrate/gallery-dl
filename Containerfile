@@ -3,7 +3,7 @@ FROM ${BASE_IMAGE}
 
 ARG APP_VERSION
 
-ENV HOME=/home/tuxcreate \
+ENV HOME=/home/tuxcrate \
     PYTHONUNBUFFERED=1 \
     PYTHONDONTWRITEBYTECODE=1
 
@@ -21,8 +21,8 @@ RUN set -eux; \
     gallery-dl --help > /dev/null; \
     ffmpeg -version; \
     ffprobe -version; \
-    addgroup -g 1000 tuxcreate; \
-    adduser -D -u 1000 -G tuxcreate -h /home/tuxcreate -s /sbin/nologin tuxcreate; \
+    addgroup -g 1000 tuxcrate; \
+    adduser -D -u 1000 -G tuxcrate -h /home/tuxcrate -s /sbin/nologin tuxcrate; \
     mkdir /downloads; \
     chown 1000:1000 /downloads
 
