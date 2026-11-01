@@ -24,7 +24,7 @@ trap 'exit 143' TERM
 
 phase='checking the configured user, group, home, and downloads directory'
 docker run --rm --pull=never --platform "$platform" --network none \
-    --label "io.tuxcrate.smoke-test=${TUXCRATE_TEST_ID:-manual-gallery-dl-$$}" \
+    --label "com.tuxcrate.smoke-test=${TUXCRATE_TEST_ID:-manual-gallery-dl-$$}" \
     --entrypoint sh "$image" -eu -c '
         test "$(id -u)" = 1000
         test "$(id -g)" = 1000
@@ -38,7 +38,7 @@ phase='running the default help command'
 
 run_cli() {
     container=$(docker create --pull=never --platform "$platform" --network none \
-        --label "io.tuxcrate.smoke-test=${TUXCRATE_TEST_ID:-manual-gallery-dl-$$}" "$image" "$@")
+        --label "com.tuxcrate.smoke-test=${TUXCRATE_TEST_ID:-manual-gallery-dl-$$}" "$image" "$@")
     docker start "$container" > /dev/null
     exit_code=$(timeout 30 docker wait "$container")
     if [[ $exit_code != 0 ]]; then
